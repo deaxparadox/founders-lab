@@ -1,0 +1,3 @@
+
+class SIDTimeOutException(Exception):
+    ...

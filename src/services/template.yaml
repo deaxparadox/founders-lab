@@ -1,0 +1,89 @@
+step-1:
+  personal_finance_contract_and_time_assessment:
+    template_name: Personal_Finance_Contract_and_Time_Assessment.xlsx
+    description: Assessments and planning tools as you progress through your entrepreneurial transition to ensure systematic preparation and execution.
+  entrepreneurial_readiness_and_mindset_assessment:
+    template_name: Entrepreneurial_Readiness_and_Mindset_Assessment.xlsx
+    description: Contains three comprehensive assessments to help you evaluate your readinessfor entrepreneurship and identify areas for development.
+step-2:
+  business_idea_evaluation_template:
+    template_name: Business_Idea_Evaluation_Template.xlsx
+    description: Business Idea Evaluation Template
+  tam_sam_som_analysis_template:
+    template_name: TAM_SAM_SOM_Analysis_Template.xlsx
+    description: Total Addressable Market (TAM), Serviceable Available Market (SAM), and Serviceable Obtainable Market (SOM) Analysis workbook.
+  competitor_analysis_template:
+    template_name: Competitor_Analysis_Template.xlsx
+    description: Competitor Analysis Matrix Template Workbook
+  customer_validation_interview_guide:
+    template_name: Customer_Validation_Interview_Guide.rtf
+    description: Customer Validation Interview Guide Workbook
+  validation_framework_checklist:
+    template_name: Validation_Framework_Checklist.xlsx
+    description: Validation Framework Checklist
+step-3:
+  legal_compliance_checklist:
+    template_name: Legal_Compliance_Checklist.xlsx
+    description: descriptionIsAuthenticatedIsAuthenticated
+  legal_document_templates:
+    template_name: Legal_Document_Templates.docx
+    description: description
+  financial_modeling_toolkit:
+    template_name: Financial_Modeling_Toolkit.xlsx
+    description: description
+  contract_tracker:
+    template_name: Contract_Tracker.xlsx
+    description: description
+step-4:
+  mvp_templates_and_checklists: MVP_Templates_and_Checklists.xlsx
+step-5:
+  business_tools_evaluation_matrix:
+    template_name: Business_Tools_Evaluation_Matrix.xlsx
+    description: description
+  implementation_timeline_tracker:
+    template_name: Implementation_Timeline_Tracker.xlsx
+    description: description
+  website_launch_checklist:
+    template_name: Website_Launch_Checklist.xlsx
+    description: description
+  website_launch_checklist:
+    template_name: Brand_Identity_Worksheet.xlsx
+    description: description
+  marketing_channel_planner:
+    template_name: Marketing_Channel_Planner.xlsx
+    description: description
+  budget_allocation_tracker:
+    template_name: Budget_Allocation_Tracker.xlsx
+    description: description
+step-6:
+  pricing_strategy_calculator:
+    template_name: Pricing_Strategy_Calculator.xlsx
+    description: description
+  launch_timeline_tracker:
+    template_name: Launch_Timeline_Tracker.xlsx
+    description: description
+  customer_feedback_analysis:
+    template_name: Customer_Feedback_Analysis.xlsx
+    description: description
+  performance_metrics_dashboard:
+    template_name: Performance_Metrics_Dashboard.xlsx
+    description: description
+  template_name: Marketing_Campaign_Planner.xlsx
+  description: description
+  template_name: Early_Adopter_Management.xlsx
+  description: description
+step-7:
+  template_name: Daily_Operations_Dashboard.xlsx
+  description: description
+  template_name: Cash_Flow_Management.xlsx
+  description: description
+  template_name: Customer_Retention_Analytics.xlsx
+  description: description
+  template_name: Process_Documentation.xlsx
+  description: description
+  template_name: KPI_Tracking_Dashboard.xlsx
+  description: description
+  template_name: Team_Performance_Management.xlsx
+  description: description
+  template_name: Strategic_Planning_Toolkit.xlsx
+  description: description
