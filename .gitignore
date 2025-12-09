@@ -244,3 +244,4 @@ __marimo__/
 .streamlit/secrets.tomlc
 
 src/logs
+dist.tar
