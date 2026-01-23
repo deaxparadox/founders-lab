@@ -312,3 +312,7 @@ AGENT_TRACKING = False
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 FRONTEND_URL = os.getenv("FRONTEND_URL")
 BACKEND_URL = os.getenv("BACKEND_URL")
+
+
+# common separated list of accounts to disable token usage
+TOKEN_DISABLE_ACCOUNT = os.getenv("TOKEN_DISABLE_ACCOUNT").split(",")

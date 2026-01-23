@@ -1,6 +1,7 @@
 from traceback import format_exc
 
 from adrf.views import APIView
+from django.conf import settings
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -18,8 +19,16 @@ class AgentView(APIView):
         try:
             token, _ = await TokenUsage.objects.aget_or_create(bubble_user=request.user)
             
-            if not await token.token_available():
-                return Response({"notifiy": "Token consumed, please buy the tokens"}, status=status.HTTP_402_PAYMENT_REQUIRED)
+            # check if the account is in the list of accounts to disable token usage checking
+            # if yes, then skip the token usage checking
+            # if no, then check if the token is available
+            skip_token_usage = request.user.bubble_user_email in settings.TOKEN_DISABLE_ACCOUNT
+            
+            # if the account is not in the list of accounts to disable token usage checking, 
+            # then check if the token is available, if not, then return a 402 error
+            if not skip_token_usage:
+                if not await token.token_available():
+                    return Response({"notifiy": "Token consumed, please buy the tokens"}, status=status.HTTP_402_PAYMENT_REQUIRED)
             
             chat_id = request.query_params.get("chat-id")
             if not chat_id:
@@ -46,15 +55,30 @@ class AgentView(APIView):
         
         
 class TokenUsageView(APIView):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     
     async def get(self, request):
         try:
             token, created = await TokenUsage.objects.aget_or_create(bubble_user=request.user)
+            
+            # check if the account is in the list of accounts to disable token usage checking
+            # if yes, then return the total token and token used
+            # if no, then return a 402 error
+            skip_token_usage = request.user.bubble_user_email in settings.TOKEN_DISABLE_ACCOUNT
+            
+            if skip_token_usage:
+                return Response({
+                    "total_token": "60000",
+                    "token_used": "0",
+                    "skip_token_usage": True
+                }, status=status.HTTP_200_OK)
+            
+            
             return Response(
                 {
                     "total_token": token.token_count,
-                    "token_used": token.token_used
+                    "token_used": token.token_used,
+                    "skip_token_usage": False
                 },
                 status=status.HTTP_200_OK
             )    
