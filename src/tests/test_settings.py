@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pytest
 
+from prod_env import VALID
+
 SRC = Path(__file__).resolve().parents[1]
 PROBE = (
     "import importlib, json, sys;"
@@ -17,7 +19,7 @@ PROBE = (
 
 
 def run(args, **env):
-    full_env = {**os.environ, "PYTHONPATH": str(SRC), **env}
+    full_env = {**os.environ, "PYTHONPATH": str(SRC), **VALID, **env}
     return subprocess.run([sys.executable, *args], cwd=SRC, env=full_env, capture_output=True, text=True)
 
 
