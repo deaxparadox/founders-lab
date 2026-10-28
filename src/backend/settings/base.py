@@ -19,19 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-na5)h(vh)!gt4=%*--=&qgn1%c7qpp-p29ytl&d1^ux!8eli9z'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Application definition
@@ -184,10 +172,6 @@ MIGRATION_MODULES = {
     'ai': "ai.migrations.ai",
     "bubbleio": "bubbleio.migrations.bubbleio"
 }
-
-
-# CORS Settings
-CORS_ALLOW_ALL_ORIGINS: bool = True
 
 
 # BUBBLE.IO

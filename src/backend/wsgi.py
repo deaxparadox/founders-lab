@@ -7,10 +7,10 @@ For more information on this file, see
 https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
-import os
+from backend.env import require_settings_module
 
-from django.core.wsgi import get_wsgi_application
+require_settings_module()
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+from django.core.wsgi import get_wsgi_application  # noqa: E402
 
 application = get_wsgi_application()
